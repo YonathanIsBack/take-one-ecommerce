@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import {
   Container,
@@ -15,6 +15,7 @@ import {
   Box,
   Chip,
   InputAdornment,
+  Skeleton,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { products, categories } from "../data/products";
@@ -22,10 +23,33 @@ import { products, categories } from "../data/products";
 const formatPrice = (price) =>
   new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(price);
 
+function ProductSkeleton() {
+  return (
+    <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+      <Skeleton variant="rectangular" height={200} />
+      <CardContent sx={{ flexGrow: 1 }}>
+        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", mb: 1 }}>
+          <Skeleton variant="text" width="60%" height={32} />
+          <Skeleton variant="rounded" width={60} height={24} />
+        </Box>
+        <Skeleton variant="text" width="100%" />
+        <Skeleton variant="text" width="80%" />
+        <Skeleton variant="text" width="40%" height={32} sx={{ mt: 1 }} />
+      </CardContent>
+    </Card>
+  );
+}
+
 export default function CatalogPage() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const [sortBy, setSortBy] = useState("name");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 800);
+    return () => clearTimeout(timer);
+  }, []);
 
   const filtered = useMemo(() => {
     let items = products.filter((p) => {
@@ -81,49 +105,55 @@ export default function CatalogPage() {
       </Box>
 
       <Grid container spacing={3}>
-        {filtered.map((product) => (
-          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={product.id}>
-            <Card
-              component={RouterLink}
-              to={`/product/${product.id}`}
-              sx={{ textDecoration: "none", height: "100%", display: "flex", flexDirection: "column" }}
-            >
-              <CardMedia
-                component="img"
-                height="200"
-                image={product.images[0]}
-                alt={product.name}
-              />
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                  <Typography variant="h6" fontWeight="bold">
-                    {product.name}
-                  </Typography>
-                  <Chip label={product.category} size="small" color="primary" variant="outlined" />
-                </Box>
-                <Typography variant="body2" color="text.secondary" sx={{ my: 1 }}>
-                  {product.description}
-                </Typography>
-                <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                  {product.discountPrice ? (
-                    <>
-                      <Typography variant="h6" color="error" fontWeight="bold">
-                        {formatPrice(product.discountPrice)}
+        {loading
+          ? Array.from({ length: 6 }).map((_, i) => (
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={i}>
+                <ProductSkeleton />
+              </Grid>
+            ))
+          : filtered.map((product) => (
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={product.id}>
+                <Card
+                  component={RouterLink}
+                  to={`/product/${product.id}`}
+                  sx={{ textDecoration: "none", height: "100%", display: "flex", flexDirection: "column" }}
+                >
+                  <CardMedia
+                    component="img"
+                    height="200"
+                    image={product.images[0]}
+                    alt={product.name}
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+                      <Typography variant="h6" fontWeight="bold">
+                        {product.name}
                       </Typography>
-                      <Typography variant="body2" sx={{ textDecoration: "line-through", color: "text.secondary" }}>
-                        {formatPrice(product.price)}
-                      </Typography>
-                    </>
-                  ) : (
-                    <Typography variant="h6" fontWeight="bold">
-                      {formatPrice(product.price)}
+                      <Chip label={product.category} size="small" color="primary" variant="outlined" />
+                    </Box>
+                    <Typography variant="body2" color="text.secondary" sx={{ my: 1 }}>
+                      {product.description}
                     </Typography>
-                  )}
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                      {product.discountPrice ? (
+                        <>
+                          <Typography variant="h6" color="error" fontWeight="bold">
+                            {formatPrice(product.discountPrice)}
+                          </Typography>
+                          <Typography variant="body2" sx={{ textDecoration: "line-through", color: "text.secondary" }}>
+                            {formatPrice(product.price)}
+                          </Typography>
+                        </>
+                      ) : (
+                        <Typography variant="h6" fontWeight="bold">
+                          {formatPrice(product.price)}
+                        </Typography>
+                      )}
+                    </Box>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
       </Grid>
     </Container>
   );

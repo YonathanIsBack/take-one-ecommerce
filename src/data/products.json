@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1,
+    "name": "Salt Bread",
+    "category": "Bread",
+    "price": 8000,
+    "discountPrice": null,
+    "description": "Soft and fluffy Japanese salt bread with a buttery swirl. Light, airy, and slightly salty crust.",
+    "images": [
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600",
+      "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=600",
+      "https://images.unsplash.com/photo-1586444248879-bc604cbd555a?w=600"
+    ],
+    "stock": 50,
+    "rating": 4.8,
+    "reviewCount": 124,
+    "tags": ["bestseller"],
+    "weight": "100g",
+    "ingredients": ["flour", "butter", "salt", "sugar", "yeast", "milk"],
+    "allergens": ["gluten", "dairy"],
+    "isAvailable": true
+  },
+  {
+    "id": 2,
+    "name": "Japanese Milk Bread",
+    "category": "Bread",
+    "price": 12000,
+    "discountPrice": null,
+    "description": "Pillowy soft Japanese milk bread (shokupan). Made with tangzhong method for an incredibly tender crumb.",
+    "images": [
+      "https://images.unsplash.com/photo-1586444248879-bc604cbd555a?w=600",
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600",
+      "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=600"
+    ],
+    "stock": 30,
+    "rating": 4.9,
+    "reviewCount": 89,
+    "tags": ["new"],
+    "weight": "250g",
+    "ingredients": ["flour", "milk", "butter", "sugar", "yeast", "salt"],
+    "allergens": ["gluten", "dairy"],
+    "isAvailable": true
+  },
+  {
+    "id": 3,
+    "name": "Dubai Chewy Cookie",
+    "category": "Cookie",
+    "price": 15000,
+    "discountPrice": 12000,
+    "description": "The viral Dubai chocolate-inspired chewy cookie. Rich cocoa with pistachio kunafa filling.",
+    "images": [
+      "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600",
+      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600",
+      "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=600"
+    ],
+    "stock": 40,
+    "rating": 4.7,
+    "reviewCount": 256,
+    "tags": ["bestseller", "trending"],
+    "weight": "80g",
+    "ingredients": ["flour", "cocoa", "butter", "sugar", "eggs", "pistachio", "kunafa"],
+    "allergens": ["gluten", "dairy", "eggs", "nuts"],
+    "isAvailable": true
+  },
+  {
+    "id": 4,
+    "name": "Chocolate Brownie",
+    "category": "Brownies",
+    "price": 18000,
+    "discountPrice": null,
+    "description": "Dense, fudgy chocolate brownie with a crackly top. Made with premium dark chocolate.",
+    "images": [
+      "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600",
+      "https://images.unsplash.com/photo-1612886623633-2e4b8c7f0b83?w=600",
+      "https://images.unsplash.com/photo-1607114910221-3b4b6e19b7b8?w=600"
+    ],
+    "stock": 35,
+    "rating": 4.6,
+    "reviewCount": 178,
+    "tags": [],
+    "weight": "120g",
+    "ingredients": ["dark chocolate", "butter", "sugar", "eggs", "flour", "cocoa powder"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "isAvailable": true
+  },
+  {
+    "id": 5,
+    "name": "Matcha Brownie",
+    "category": "Brownies",
+    "price": 20000,
+    "discountPrice": null,
+    "description": "Premium matcha brownie with white chocolate swirl. Earthy, rich, and indulgent.",
+    "images": [
+      "https://images.unsplash.com/photo-1607114910221-3b4b6e19b7b8?w=600",
+      "https://images.unsplash.com/photo-1612886623633-2e4b8c7f0b83?w=600",
+      "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600"
+    ],
+    "stock": 25,
+    "rating": 4.8,
+    "reviewCount": 92,
+    "tags": ["new"],
+    "weight": "120g",
+    "ingredients": ["matcha", "white chocolate", "butter", "sugar", "eggs", "flour"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "isAvailable": true
+  },
+  {
+    "id": 6,
+    "name": "Chocolate Chip Cookie",
+    "category": "Cookie",
+    "price": 10000,
+    "discountPrice": null,
+    "description": "Classic chewy chocolate chip cookie with premium chocolate chunks and a golden edge.",
+    "images": [
+      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600",
+      "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600",
+      "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=600"
+    ],
+    "stock": 60,
+    "rating": 4.5,
+    "reviewCount": 312,
+    "tags": ["bestseller"],
+    "weight": "60g",
+    "ingredients": ["flour", "butter", "sugar", "eggs", "chocolate chips", "vanilla"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "isAvailable": true
+  },
+  {
+    "id": 7,
+    "name": "Croissant",
+    "category": "Pastry",
+    "price": 15000,
+    "discountPrice": 13000,
+    "description": "Buttery, flaky French croissant with golden layers. Perfectly laminated with premium butter.",
+    "images": [
+      "https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=600",
+      "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=600",
+      "https://images.unsplash.com/photo-1509365390695-33aee754301f?w=600"
+    ],
+    "stock": 45,
+    "rating": 4.9,
+    "reviewCount": 203,
+    "tags": ["bestseller"],
+    "weight": "90g",
+    "ingredients": ["flour", "butter", "milk", "sugar", "yeast", "salt"],
+    "allergens": ["gluten", "dairy"],
+    "isAvailable": true
+  },
+  {
+    "id": 8,
+    "name": "Danish Pastry",
+    "category": "Pastry",
+    "price": 14000,
+    "discountPrice": null,
+    "description": "Flaky Danish pastry filled with custard cream and topped with caramelized fruit.",
+    "images": [
+      "https://images.unsplash.com/photo-1509365390695-33aee754301f?w=600",
+      "https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=600",
+      "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=600"
+    ],
+    "stock": 30,
+    "rating": 4.7,
+    "reviewCount": 145,
+    "tags": [],
+    "weight": "100g",
+    "ingredients": ["flour", "butter", "custard", "sugar", "eggs", "fruit"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "isAvailable": true
+  },
+  {
+    "id": 9,
+    "name": "Red Velvet Cake Slice",
+    "category": "Cake",
+    "price": 25000,
+    "discountPrice": 22000,
+    "description": "Moist red velvet cake slice with cream cheese frosting. Rich cocoa flavor with a vibrant color.",
+    "images": [
+      "https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=600",
+      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600",
+      "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600"
+    ],
+    "stock": 20,
+    "rating": 4.8,
+    "reviewCount": 67,
+    "tags": ["trending"],
+    "weight": "150g",
+    "ingredients": ["flour", "cocoa", "buttermilk", "cream cheese", "sugar", "eggs", "food coloring"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "isAvailable": true
+  },
+  {
+    "id": 10,
+    "name": "Chocolate Muffin",
+    "category": "Muffin",
+    "price": 12000,
+    "discountPrice": null,
+    "description": "Rich chocolate muffin loaded with chocolate chips. Moist interior with a domed top.",
+    "images": [
+      "https://images.unsplash.com/photo-1607114910221-3b4b6e19b7b8?w=600",
+      "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600",
+      "https://images.unsplash.com/photo-1612886623633-2e4b8c7f0b83?w=600"
+    ],
+    "stock": 40,
+    "rating": 4.6,
+    "reviewCount": 198,
+    "tags": [],
+    "weight": "110g",
+    "ingredients": ["flour", "cocoa", "sugar", "eggs", "butter", "chocolate chips"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "isAvailable": true
+  },
+  {
+    "id": 11,
+    "name": "Cinnamon Roll",
+    "category": "Pastry",
+    "price": 13000,
+    "discountPrice": null,
+    "description": "Soft cinnamon roll with a generous cream cheese glaze. Warm, spiced, and irresistible.",
+    "images": [
+      "https://images.unsplash.com/photo-1509365390695-33aee754301f?w=600",
+      "https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=600",
+      "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=600"
+    ],
+    "stock": 35,
+    "rating": 4.7,
+    "reviewCount": 156,
+    "tags": [],
+    "weight": "130g",
+    "ingredients": ["flour", "butter", "cinnamon", "sugar", "cream cheese", "eggs"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "isAvailable": true
+  },
+  {
+    "id": 12,
+    "name": "Chocolate Eclair",
+    "category": "Pastry",
+    "price": 16000,
+    "discountPrice": 14000,
+    "description": "Classic chocolate eclair with choux pastry, vanilla custard filling, and dark chocolate glaze.",
+    "images": [
+      "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=600",
+      "https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=600",
+      "https://images.unsplash.com/photo-1509365390695-33aee754301f?w=600"
+    ],
+    "stock": 25,
+    "rating": 4.8,
+    "reviewCount": 88,
+    "tags": ["trending"],
+    "weight": "95g",
+    "ingredients": ["flour", "butter", "eggs", "vanilla custard", "dark chocolate"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "isAvailable": true
+  }
+]

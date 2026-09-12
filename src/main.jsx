@@ -10,7 +10,7 @@ const theme = createTheme({
   palette: {
     primary: { main: "#5D4037" },
     secondary: { main: "#8D6E63" },
-    background: { default: "#FFFDE7" },
+    background: { default: "#F5F0EB" },
   },
   typography: {
     fontFamily: '"DM Sans", "Helvetica", "Arial", sans-serif',
@@ -20,6 +20,15 @@ const theme = createTheme({
     h4: { fontFamily: '"Playfair Display", serif' },
     h5: { fontFamily: '"Playfair Display", serif' },
     h6: { fontFamily: '"Playfair Display", serif' },
+  },
+  components: {
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: 12,
+        },
+      },
+    },
   },
 });
 

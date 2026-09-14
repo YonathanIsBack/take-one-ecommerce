@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import { Container } from "@mui/material";
 import Navbar from "./components/Navbar";
-import CatalogPage from "./pages/CatalogPage";
-import DetailPage from "./pages/DetailPage";
-import BasketPage from "./pages/BasketPage";
-import OrderPage from "./pages/OrderPage";
-import AddressPage from "./pages/AddressPage";
-import PaymentPage from "./pages/PaymentPage";
-import OrderDetailPage from "./pages/OrderDetailPage";
+import CatalogPage from "./pages/catalog";
+import DetailPage from "./pages/detail";
+import BasketPage from "./pages/basket";
+import OrderPage from "./pages/order";
+import AddressPage from "./pages/address";
+import PaymentPage from "./pages/payment";
+import OrderDetailPage from "./pages/order-detail";
 
 export default function App() {
   return (

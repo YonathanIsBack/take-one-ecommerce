@@ -10,8 +10,8 @@ import {
   Button,
   Divider,
 } from "@mui/material";
-import { useCart } from "../context/CartContext";
-import { useOrder } from "../context/OrderContext";
+import { useCart } from "../../context/CartContext";
+import { useOrder } from "../../context/OrderContext";
 
 const formatPrice = (price) =>
   new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(price);

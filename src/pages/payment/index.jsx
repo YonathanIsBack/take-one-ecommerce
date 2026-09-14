@@ -13,7 +13,7 @@ import {
   FormLabel,
   Divider,
 } from "@mui/material";
-import { useOrder } from "../context/OrderContext";
+import { useOrder } from "../../context/OrderContext";
 
 const formatPrice = (price) =>
   new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(price);

@@ -8,7 +8,7 @@ import {
   Box,
   Paper,
 } from "@mui/material";
-import { useOrder } from "../context/OrderContext";
+import { useOrder } from "../../context/OrderContext";
 
 export default function AddressPage() {
   const { order, updateAddress } = useOrder();

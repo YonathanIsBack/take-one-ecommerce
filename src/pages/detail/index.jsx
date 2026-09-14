@@ -18,9 +18,9 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
-import ImageCarousel from "../components/ImageCarousel";
-import { fetchProductById } from "../data/api";
-import { useCart } from "../context/CartContext";
+import ImageCarousel from "./ImageCarousel";
+import { fetchProductById } from "../../data/api";
+import { useCart } from "../../context/CartContext";
 
 const formatPrice = (price) =>
   new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(price);

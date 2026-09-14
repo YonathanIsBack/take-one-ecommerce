@@ -13,8 +13,8 @@ import {
   Paper,
 } from "@mui/material";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
-import { useOrder } from "../context/OrderContext";
-import { useCart } from "../context/CartContext";
+import { useOrder } from "../../context/OrderContext";
+import { useCart } from "../../context/CartContext";
 
 const formatPrice = (price) =>
   new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(price);

@@ -18,7 +18,7 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 import NewReleasesIcon from "@mui/icons-material/NewReleases";
-import { fetchProducts } from "../data/api";
+import { fetchProducts } from "../../data/api";
 
 const formatPrice = (price) =>
   new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 }).format(price);

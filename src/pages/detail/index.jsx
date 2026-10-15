@@ -88,24 +88,6 @@ export default function DetailPage() {
           <ImageCarousel images={product.images} />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}>
-            <Chip label={product.category} color="primary" variant="outlined" />
-            {product.discountPrice && (
-              <Chip label="DISCOUNT" color="error" size="small" />
-            )}
-            {product.tags?.map((tag) => (
-              <Chip
-                key={tag}
-                label={tag}
-                size="small"
-                sx={{
-                  bgcolor: tag === "bestseller" || tag === "trending" ? "#D84315" : "#5D4037",
-                  color: "#fff",
-                  textTransform: "capitalize",
-                }}
-              />
-            ))}
-          </Box>
           <Typography variant="h4" fontWeight="bold" gutterBottom>
             {product.name}
           </Typography>
@@ -134,15 +116,6 @@ export default function DetailPage() {
           <Divider sx={{ my: 2 }} />
           <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
             {product.description}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
-            Weight: {product.weight}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
-            Ingredients: {product.ingredients?.join(", ")}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
-            Allergens: {product.allergens?.join(", ")}
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
             Stock: {product.stock} available

@@ -45,7 +45,7 @@ export default function BasketPage() {
           <CardMedia
             component="img"
             sx={{ width: 120, objectFit: "cover" }}
-            image={item.images[0]}
+            image={item.thumbnail || item.images?.[0]}
             alt={item.name}
           />
           <CardContent sx={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
@@ -56,7 +56,7 @@ export default function BasketPage() {
                   <DeleteIcon color="error" />
                 </IconButton>
               </Box>
-              <Chip label={item.category} size="small" variant="outlined" sx={{ mb: 1 }} />
+              {item.category && <Chip label={item.category} size="small" variant="outlined" sx={{ mb: 1 }} />}
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 <IconButton size="small" onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}>
                   <RemoveIcon />

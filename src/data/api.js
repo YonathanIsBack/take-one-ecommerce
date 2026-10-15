@@ -30,7 +30,7 @@ export const fetchProducts = async () => {
 export const fetchProductById = async (id) => {
   const res = await fetch(`${API_BASE_URL}${API_PATHS.products}/${id}`);
   const data = await res.json();
-  return mapProduct(data);
+  return mapProduct(data.item);
 };
 
 export const fetchCategories = async () => {

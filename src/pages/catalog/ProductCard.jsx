@@ -54,7 +54,7 @@ function ProductView({ product }) {
       <Box sx={{ overflow: "hidden", height: 220, position: "relative" }}>
         <Box
           component="img"
-          src={product.images[0]}
+          src={product.thumbnail || product.images[0]}
           alt={product.name}
           className="product-image"
           sx={{
